@@ -4,13 +4,16 @@ module.exports = {
     node: true
   },
   extends: [
-    'plugin:vue/vue3-essential',
-    '@vue/standard'
+    'plugin:vue/vue3-essential'
+    // '@vue/standard'
   ],
   parserOptions: {
     parser: '@babel/eslint-parser'
   },
   rules: {
+    'no-unused-vars': 'off',
+    'no-duplicate-imports': 0,
+    'space-before-function-paren': 0,
     'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off'
   }

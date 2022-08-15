@@ -35,7 +35,7 @@
 </template>
 
 <script>
-// import { getCurrentInstance } from 'vue'
+
 export default {
   data () {
     return {
@@ -86,7 +86,6 @@ export default {
     login () {
       this.$refs.loginFormRef.validate(async valid => {
         if (!valid) return ''
-        // const { proxy } = getCurrentInstance()
         const { data: res } = await this.$http.post('login', this.loginForm)
         if (res.meta.status !== 200) {
           return this.$message.error('登录失败!')

@@ -12,7 +12,17 @@ const routes = [
   },
   {
     path: '/home',
-    component: () => import('@/views/HomeView.vue')
+    component: () => import('@/views/HomeView.vue'),
+    redirect: '/welcome',
+    children: [
+      {
+        path: '/welcome',
+        component: () => import('@/views/welcome.vue')
+      },
+      {
+        path: '/users',
+        component: () => import('@/components/user/UserS.vue')
+      }]
   }
 ]
 
